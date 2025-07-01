@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
 
+/* Sticky colorful navbar, playful style */
 .navbar {
   width: 100vw;
   position: sticky;
@@ -9,175 +10,193 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(89deg, #4F8CFF 0%, #FFB53A 45%, #FF4971 100%);
-  min-height: 64px;
-  padding: 0 2rem;
+  background: linear-gradient(99deg,#fd80ff 0%, #FF4971 26%, #FFB53A 61%, #4F8CFF 100%);
+  min-height: 66px;
+  padding: 0 2.2rem;
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-  box-shadow: 0 2px 22px 0 rgba(70,60,100,0.11);
-  transition: background 0.4s;
+  box-shadow: 0 2px 18px 0 rgba(204,60,180,0.13), 0 1.5px 11px 0 rgba(32,0,70,0.09);
+  transition: background 0.34s;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.12rem;
   font-weight: 800;
-  letter-spacing: 0.03em;
-  color: #fff;
+  letter-spacing: 0.02em;
   user-select: none;
-  text-shadow: 0px 2px 10px rgba(209, 84, 252, .20), 0px 0.5px 2.5px #0002;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 0.07em 0.22em;
+  box-shadow: 0 1.8px 8px #ff59c94a, 0 0.7px 2.5px #0002;
+  /* glow/gradient effect for the logo */
 }
 .logoEmoji {
-  margin-right: 0.45em;
+  margin-right: 0.42em;
   font-size: 2.1rem;
-  filter: drop-shadow(0px 1px 5px #ffe4fa77);
+  filter: drop-shadow(0px 1px 7px #ffe4fa99);
   animation: emoji-bounce 2.7s infinite alternate cubic-bezier(.4,-0.2,.7,1.2);
 }
 .logoText {
-  background: linear-gradient(92deg,#fff 35%, #ffe07a 60%, #e46dad 100%);
+  background: linear-gradient(89deg, #fff 30%, #ffe07a 55%, #e46dad 79%, #577bff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 12px #fdff7e66);
+  filter: drop-shadow(0px 2px 17px #fdff7e66);
+  font-weight: 900;
+  letter-spacing: 0.012em;
+  text-shadow: 0px 3px 17px #0001;
+  border-radius: 3px;
 }
 
 @keyframes emoji-bounce {
-  from { transform: translateY(0);}
-  to { transform: translateY(-5px) rotate(-7deg);}
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px) rotate(-7deg); }
 }
 
-/* Hamburger button - only visible on mobile */
+/* Hamburger - visible only on mobile */
 .hamburger {
   display: none;
   background: none;
   border: none;
   flex-direction: column;
   gap: 4px;
-  padding: 14px 6px;
+  padding: 15px 6px;
   cursor: pointer;
   min-width: 44px;
+  z-index: 199;
 }
-
 .bar {
   display: block;
   height: 4px;
   width: 32px;
   border-radius: 3px;
   background: #fff;
-  box-shadow: 0 1px 6px 1px #da5bf752;
+  box-shadow: 0 1px 8px 1px #da5bf784;
   transition: transform 0.22s, opacity 0.22s;
 }
 
+/* Nav links horizontal on desktop, stack on mobile */
 .navLinks {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 2.4rem;
+  gap: 2.8rem;
   margin: 0;
   padding: 0;
   transition: max-height 0.34s cubic-bezier(.8,0,.11,1.1);
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Individual nav link */
 .navLink {
   display: flex;
   align-items: center;
-  font-size: 1.15rem;
+  font-size: 1.175rem;
   color: #fff;
   background: none;
   border: none;
   border-radius: 999px;
-  padding: 7px 1.1em 7px 0.8em;
-  gap: 0.45em;
+  padding: 8px 1.16em 8px 0.86em;
+  gap: 0.48em;
   box-shadow: none;
   cursor: pointer;
-  line-height: 1.2;
+  line-height: 1.18;
   letter-spacing: 0.03em;
-  transition: 
-    background 0.22s,
-    color 0.22s,
-    box-shadow 0.2s,
-    transform 0.2s;
+  transition:
+    background 0.17s,
+    color 0.17s,
+    box-shadow 0.16s,
+    transform 0.15s;
   position: relative;
   text-decoration: none;
   outline: none;
+  font-weight: 600;
+  font-family: inherit;
 }
-
-/* vibrant glowing hover/active */
-.navLink:hover, .navLink:focus {
-  background: linear-gradient(90deg,#fff4 25%, #fff1 100%);
-  color: #fcf6e8;
-  box-shadow: 0 6px 30px #6ee6ff25, 0 2px 13px #FF497159;
-  transform: scale(1.07);
+/* Glow/scale on hover/active */
+.navLink:hover, .navLink:focus-visible {
+  background: linear-gradient(91deg,#fff3 22%, #fc79cc18 100%);
+  color: #ffeeef;
+  box-shadow: 0 7px 32px #68ecff30, 0 2px 14px #FF4971AA;
+  transform: scale(1.13);
+  border: 2.1px solid #FFE082A7;
 }
 .navLink:active {
-  background: #fff9;
-  color: #edbcf7;
-  box-shadow: 0 1.7px 8px #FF497199;
-  transform: scale(1.045);
+  background: #fff8;
+  color: #ffaae0;
+  box-shadow: 0 1.7px 10px #FF49717a;
+  transform: scale(1.07);
+  border: 2.1px solid #ff59c98c;
 }
 
 .emoji {
-  font-size: 1.4em;
-  margin-right: 0.18em;
-  filter: drop-shadow(0 2px 5px #fff5);
+  font-size: 1.35em;
+  margin-right: 0.15em;
+  filter: drop-shadow(0 3px 9px #fff4);
 }
-
-.linkText {}
+.linkText {
+  font-weight: 700;
+  letter-spacing: .01em;
+}
 
 .profileWrapper {
   position: relative;
-  margin-left: 0.3em;
+  margin-left: 0.35em;
+  z-index: 50;
 }
 
+/* Profile button spacing for dropdown icon */
 .profileBtn {
-  padding-right: 2.1em;
+  padding-right: 2.3em;
 }
 
 .dropdownIcon {
-  font-size: 1em;
-  margin-left: 0.29em;
+  font-size: 1.01em;
+  margin-left: 0.24em;
   color: #ffe388;
-  filter: drop-shadow(0 0.5px 2px #3c0e37be);
+  filter: drop-shadow(0 1.2px 3px #3c0e378b);
+  pointer-events: none;
 }
 
-/* profile dropdown starts hidden */
+/* Dropdown is hidden by default */
 .profileDropdown {
   display: none;
   position: absolute;
   top: 108%;
   right: 0;
-  min-width: 160px;
-  background: linear-gradient(120deg, #fff 18%, #ffb53a22 99%, #fd80ff11 89%);
-  box-shadow: 0 7px 24px 2px #b627b029;
-  border-radius: 18px;
+  min-width: 164px;
+  background: linear-gradient(120deg, #fff 22%, #ffb53a19 98%, #fd80ff11 80%);
+  box-shadow: 0 7px 23px 2px #b627b015, 0 2.5px 12px #713fd733;
+  border-radius: 19px;
   overflow: hidden;
-  z-index: 50;
-  padding: 0.6em 0;
-  border: 1.5px solid #ffd56844;
-  animation: fadeInDropdown 0.29s;
+  z-index: 70;
+  padding: 0.62em 0;
+  border: 2px solid #ffd56847;
+  animation: fadeInDropdown 0.24s;
 }
 @keyframes fadeInDropdown {
   from { opacity: 0; transform: translateY(-10px);}
   to   { opacity: 1; transform: none;}
 }
 .show { display: block; }
-
 .dropdownItem {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.44em;
+  gap: 0.36em;
   width: 100%;
-  font-size: 1.08em;
+  font-size: 1.10em;
   color: #712adf;
-  padding: 12px 18px;
-  font-weight: 600;
+  padding: 13px 18px 13px 17px;
+  font-weight: 700;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
-  transition: background 0.17s, color 0.15s;
+  transition: background 0.15s, color 0.14s;
+  border-bottom: 1px solid #faf7ff1f;
+}
+.dropdownItem:last-child {
+  border-bottom: none;
 }
 .dropdownItem:hover, .dropdownItem:focus {
   background: #ffe3fd;
@@ -187,62 +206,67 @@
 /* ===== Responsive design ====== */
 @media (max-width: 950px) {
   .navLinks {
-    gap: 1.18rem;
-    font-size: 1em;
+    gap: 1.2rem;
+    font-size: 1.045em;
   }
 }
 @media (max-width: 770px) {
   .navbar {
     padding: 0 0.5rem;
-    min-height: 55px;
+    min-height: 53px;
   }
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.28rem;
   }
   .logoEmoji {
-    font-size: 1.35rem;
+    font-size: 1.28rem;
   }
 }
 @media (max-width: 700px) {
+  .navbar {
+    min-height: 47px;
+  }
   .navLinks {
     position: absolute;
     right: 0;
     top: 100%;
-    width: 93vw;
-    background: linear-gradient(99deg, #4F8CFF 0%, #FFB53A 55%, #FF4971 99%);
+    width: 98vw;
+    background: linear-gradient(99deg, #fd80ff 0%, #FF4971 40%, #FFB53A 80%, #4F8CFF 100%);
     flex-direction: column;
     align-items: flex-end;
     gap: 0;
     max-height: 0;
     overflow: hidden;
-    border-radius: 0px 0px 20px 20px;
-    box-shadow: 0 4px 26px #ff1c8a27;
-    transition: max-height 0.35s cubic-bezier(.87,.01,.39,.99);
-    font-size: 1.02em;
+    border-radius: 0 0 23px 23px;
+    font-size: 1.04em;
+    margin: 0;
+    box-shadow: 0 4px 24px #ff1c8a29;
+    transition: max-height 0.31s cubic-bezier(.88,.01,.29,.97);
   }
   .open {
-    max-height: 380px;
+    max-height: 410px;
     padding-bottom: 0.1em;
+    overflow-y: auto;
   }
   .navLinks > li {
     width: 100%;
     margin-bottom: 0.1em;
-    padding: 0.27em 0;
+    padding: 0.22em 0;
     display: flex;
     justify-content: flex-end;
   }
   .navLink {
-    width: 86vw;
+    width: 88vw;
     justify-content: flex-start;
-    border-radius: 13px;
-    font-size: 1.06em;
+    border-radius: 17px;
+    font-size: 1.00em;
     margin-top: 0;
-    margin-bottom: 4px;
-    padding-left: 2.6em;
+    margin-bottom: 5px;
+    padding-left: 2.2em;
   }
   .profileDropdown {
-    right: 9vw;
-    min-width: 120px;
+    right: 11vw;
+    min-width: 130px;
   }
   .hamburger {
     display: flex;
